@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higher - Lower Game</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <h1>Let's play Higher - Lower</h1>
+        <h4 id="instructions"></h4>
+      </section>
+      <main>
+        <form>
+          <div>
+            <label for="guess">Your Guess:</label>
+            <input type="text" required="true" id="guess" name="guess" /><br />
+          </div>
+          <input
+            type="button"
+            id="guessBtn"
+            onclick="validateGuess()"
+            value="Guess"
+          />
+        </form>
+      </main>
+      <p id="validationMessage"></p>
+      <p id="message"></p>
+    </div>
+    <script src="scripts/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
