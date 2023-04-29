@@ -9,33 +9,93 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
+    <style>
+      body {
+        background-color: #f5f5f5;
+      }
+      .container {
+        max-width: 500px;
+        margin-top: 100px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+        background-color: #ffffff;
+        padding: 30px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+        color: #337ab7;
+        margin-bottom: 30px;
+      }
+      h4 {
+        font-size: 18px;
+        color: #444444;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      form {
+        text-align: center;
+      }
+      label {
+        font-size: 18px;
+        font-weight: bold;
+        color: #444444;
+      }
+      input[type="text"] {
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 18px;
+        border: none;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+        background-color: #f5f5f5;
+      }
+      input[type="button"] {
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        font-size: 18px;
+        border: none;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+        background-color: #337ab7;
+        color: #ffffff;
+        transition: all 0.3s ease;
+      }
+      input[type="button"]:hover {
+        background-color: #245580;
+      }
+      p {
+        text-align: center;
+        font-size: 18px;
+        color: #444444;
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <section>
-        <h1>Let's play Higher - Lower</h1>
-        <h4 id="instructions"></h4>
+        <h1>Let's Play Higher - Lower</h1>
+        <h4 id="instructions">
+          I'm thinking of a number between 1 and 100. Can you guess it?
+        </h4>
       </section>
       <main>
         <form>
           <div>
             <label for="guess">Your Guess:</label>
-            <input type="text" required="true" id="guess" name="guess" /><br />
+            <input type="text" required="true" id="guess" name="guess" />
           </div>
           <input
             type="button"
             id="guessBtn"
-            onclick="validateGuess()"
+            onclick="startGame()"
             value="Guess"
           />
         </form>
       </main>
-      <p id="validationMessage"></p>
       <p id="message"></p>
     </div>
     <script src="scripts/index.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  </body>
-</html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script
